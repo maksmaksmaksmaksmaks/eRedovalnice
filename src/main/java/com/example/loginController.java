@@ -1,6 +1,7 @@
 package com.example;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import com.example.funkcije.login;
@@ -40,7 +41,12 @@ public class loginController {
     void LoginButtonPress(ActionEvent event) {
         login login;
         login =  new login();
-        login.login_check(loginText.getText(), passText.getText());
+        try {
+            login.login_check(loginText.getText(), passText.getText());
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         
     }
 
