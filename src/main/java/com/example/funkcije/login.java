@@ -2,9 +2,6 @@ package com.example.funkcije;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import com.example.connection_;
-
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
