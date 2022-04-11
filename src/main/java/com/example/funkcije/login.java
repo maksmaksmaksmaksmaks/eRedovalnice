@@ -54,10 +54,7 @@ public class login {
         
         while(res.next())
         {
-            //check if uporabnisko_ime equals loginText and geslo equals sha256 passText
-
-
-            if(res.getString("uporabnisko_ime").equals(loginText) && res.getString("geslo").equals(encryptThisString(passText)))///////////////////////trying to hash
+            if(res.getString("uporabnisko_ime").equals(loginText) && res.getString("geslo").equals(encryptThisString(passText)))
             {
                 System.out.println("Uspešno prijavljen");
                 break;
