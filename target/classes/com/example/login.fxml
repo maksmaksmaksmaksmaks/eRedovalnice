@@ -9,19 +9,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="uporabnik" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginController">
+<AnchorPane fx:id="uporabnik" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginController">
    <children>
       <ImageView fitHeight="1024.0" fitWidth="2051.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../slike/blue_bg.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="slika" fitHeight="346.0" fitWidth="511.0" layoutX="298.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="slika" fitHeight="346.0" fitWidth="511.0" layoutX="173.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../slike/logo.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="1069.0" layoutY="358.0" prefHeight="346.0" prefWidth="348.0">
+      <AnchorPane layoutX="944.0" layoutY="246.0" prefHeight="346.0" prefWidth="348.0">
          <children>
             <Label layoutX="78.0" layoutY="90.0" text="Uporabniško ime: ">
                <font>
