@@ -34,8 +34,10 @@ public class loginController {
     @FXML
     private ImageView slika;
 
+
     @FXML
     private AnchorPane uporabnik;
+
 
     @FXML
     void LoginButtonPress(ActionEvent event) {
@@ -55,7 +57,9 @@ public class loginController {
         assert loginText != null : "fx:id=\"loginText\" was not injected: check your FXML file 'login.fxml'.";
         assert passText != null : "fx:id=\"passText\" was not injected: check your FXML file 'login.fxml'.";
         assert slika != null : "fx:id=\"slika\" was not injected: check your FXML file 'login.fxml'.";
+
         assert uporabnik != null : "fx:id=\"uporabnik\" was not injected: check your FXML file 'login.fxml'.";
+
 
     }
 

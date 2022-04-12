@@ -2,9 +2,6 @@ package com.example.funkcije;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import com.example.connection_;
-
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -49,8 +46,10 @@ public class login {
         connection_ conn = new connection_();
         java.sql.Statement stm = conn.connect_to_db().createStatement();
         conn.connect_to_db();
-        String query = "SELECT * FROM admini";
+        String query = "SELECT login('"+loginText+"','"+encryptThisString(passText) +");";
+        System.out.println(query);
         ResultSet res = stm.executeQuery(query);
+        
         
         while(res.next())
         {
