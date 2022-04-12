@@ -34,20 +34,10 @@ public class loginController {
     @FXML
     private ImageView slika;
 
-<<<<<<< HEAD
-    private ObservableList<String> a = FXCollections.observableArrayList("Učitelji","Starši","Admini");
-    
-   // @FXML
-    //private ComboBox<String> uporabnik; /////////////////////////////////////////////////combobox not working
 
-    @FXML
-    void ForgetButtonPress(ActionEvent event) {
-
-    }
-=======
     @FXML
     private AnchorPane uporabnik;
->>>>>>> ca5c0663b7f963e82d17aa788ff678e3ee6c34d2
+
 
     @FXML
     void LoginButtonPress(ActionEvent event) {
@@ -67,13 +57,10 @@ public class loginController {
         assert loginText != null : "fx:id=\"loginText\" was not injected: check your FXML file 'login.fxml'.";
         assert passText != null : "fx:id=\"passText\" was not injected: check your FXML file 'login.fxml'.";
         assert slika != null : "fx:id=\"slika\" was not injected: check your FXML file 'login.fxml'.";
-<<<<<<< HEAD
-       // assert uporabnik != null : "fx:id=\"uporabnik\" was not injected: check your FXML file 'login.fxml'.";
-        //uporabnik.setItems(a);
-=======
+
         assert uporabnik != null : "fx:id=\"uporabnik\" was not injected: check your FXML file 'login.fxml'.";
 
->>>>>>> ca5c0663b7f963e82d17aa788ff678e3ee6c34d2
+
     }
 
 }
