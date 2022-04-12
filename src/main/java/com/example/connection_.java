@@ -3,12 +3,13 @@ package com.example;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+
 public class connection_ {
     public Connection connect_to_db() {
         Connection conn = null;
         try {
             Class.forName("org.postgresql.Driver");
-            conn = DriverManager.getConnection("jdbc:postgresql://ec2-52-212-228-71.eu-west-1.compute.amazonaws.com:5432/" +"d9cuoeb7ksgh0","syvbxrnkfokxqr","86b03b6fc0fa544a179b6c363a926d169a95f6fb3a031ce2dc9224baa12c4057");
+            conn = DriverManager.getConnection("jdbc:postgresql://ec2-63-35-156-160.eu-west-1.compute.amazonaws.com:5432/" +"dduqprfk2pmjoa","crdxllwroclbzy", "7f23fe20c1738b60012ad5610187600bf94832e783dd96d03c116143e259d684");
             System.out.print("connection: ");
             if (conn != null) {
                 System.out.println("yes");
