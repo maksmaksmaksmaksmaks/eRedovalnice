@@ -47,6 +47,7 @@ public class login {
         java.sql.Statement stm = conn.connect_to_db().createStatement();
         conn.connect_to_db();
         String query = "SELECT login('"+loginText+"','"+encryptThisString(passText) +");";
+        System.out.println(query);
         ResultSet res = stm.executeQuery(query);
         
         
