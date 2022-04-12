@@ -46,24 +46,14 @@ public class login {
         connection_ conn = new connection_();
         java.sql.Statement stm = conn.connect_to_db().createStatement();
         conn.connect_to_db();
-        String query = "SELECT login('"+loginText+"','"+encryptThisString(passText) +");";
+        String query = "SELECT login('"+loginText+"','"+encryptThisString(passText) +"');";
         System.out.println(query);
         ResultSet res = stm.executeQuery(query);
         
         
         while(res.next())
         {
-            if(res.getString("uporabnisko_ime").equals(loginText) && res.getString("geslo").equals(encryptThisString(passText)))
-            {
-               
-                System.out.println("Uspešno prijavljen");
-                break;
-            }
-            else
-            {
-                System.out.println("Napačno uporabniško ime ali geslo");
-                System.out.println(encryptThisString(passText));
-            }
+            System.out.println(res.getString(1));
         }
         
     }
