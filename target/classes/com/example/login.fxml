@@ -7,18 +7,65 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="uporabnik" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginController">
+<AnchorPane fx:id="uporabnik" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginController">
    <children>
-      <Label layoutX="101.0" layoutY="141.0" text="Uporabniško ime: " />
-      <Label layoutX="131.0" layoutY="190.0" text="Geslo: " />
-      <PasswordField fx:id="passText" layoutX="74.0" layoutY="210.0" />
-      <TextField fx:id="loginText" layoutX="75.0" layoutY="160.0" maxHeight="-25" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.4" />
-      <Button fx:id="login" layoutX="120.0" layoutY="300.0" mnemonicParsing="false" onAction="#LoginButtonPress" text="PRIJAVA" />
-      <ImageView fx:id="slika" fitHeight="99.0" fitWidth="128.0" layoutX="97.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="1024.0" fitWidth="2051.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../slike/logo.png" />
+            <Image url="@../../slike/blue_bg.png" />
          </image>
       </ImageView>
+      <GridPane prefHeight="1024.0" prefWidth="2043.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="342.0" prefWidth="984.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <AnchorPane layoutX="190.0" layoutY="-4.0" prefHeight="346.0" prefWidth="348.0">
+                     <children>
+                        <Label layoutX="78.0" layoutY="90.0" text="Uporabniško ime: ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="138.0" layoutY="193.0" text="Geslo: ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="passText" layoutX="99.0" layoutY="252.0" />
+                        <TextField fx:id="loginText" layoutX="98.0" layoutY="147.0" maxHeight="-25" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" />
+                        <Button fx:id="login" layoutX="138.0" layoutY="306.0" mnemonicParsing="false" onAction="#LoginButtonPress" text="PRIJAVA" />
+                        <Label layoutX="85.0" text="PRIJAVA">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="slika" fitHeight="346.0" fitWidth="511.0" layoutX="483.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../slike/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>

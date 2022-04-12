@@ -56,13 +56,14 @@ public class login {
         {
             if(res.getString("uporabnisko_ime").equals(loginText) && res.getString("geslo").equals(encryptThisString(passText)))
             {
+               
                 System.out.println("Uspešno prijavljen");
                 break;
             }
             else
             {
                 System.out.println("Napačno uporabniško ime ali geslo");
-                System.out.println(passText);
+                System.out.println(encryptThisString(passText));
             }
         }
         
