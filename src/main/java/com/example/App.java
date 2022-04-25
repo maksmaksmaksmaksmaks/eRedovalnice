@@ -17,7 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("login"));
+        scene = new Scene(loadFXML("test_tabela_ocene"));
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();
