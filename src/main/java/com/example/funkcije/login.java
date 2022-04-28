@@ -7,6 +7,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 public class login {
 
+    String type = "";
+    Integer id = 0;
 
     public static String encryptThisString(String input)
     {
@@ -42,6 +44,7 @@ public class login {
 
     //make public void login_check()
     public void login_check(String loginText, String passText) throws SQLException {
+        String data = "";
         //get connection
         connection_ conn = new connection_();
         java.sql.Statement stm = conn.connect_to_db().createStatement();
@@ -53,8 +56,22 @@ public class login {
         
         while(res.next())
         {
-            System.out.println(res.getString(1));
+            data = res.getString(1);
+            //System.out.println(data);
         }
+        //split data in data with ,
+        String[] data_split = data.split(",");
+        //pritn everything in datasplit
+        for(int i = 0; i < data_split.length; i++)
+        {
+            System.out.println(data_split[i]);
+        }
+        //save first thing in data_split in type
+        type = data_split[0];
+        //save second thing in data_split in id
+        id = Integer.parseInt(data_split[1]);
+        //close connection
+        conn.connect_to_db().close();
         
     }
 
