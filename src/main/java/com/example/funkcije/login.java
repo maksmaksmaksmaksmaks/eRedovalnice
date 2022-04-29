@@ -2,12 +2,15 @@ package com.example.funkcije;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import com.example.jswing_table;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 public class login {
 
-    String type = "";
+    String tip = "";
     Integer id = 0;
 
     public static String encryptThisString(String input)
@@ -67,13 +70,51 @@ public class login {
             System.out.println(data_split[i]);
         }
         //save first thing in data_split in type
-        type = data_split[0];
+        tip = data_split[0];
         //save second thing in data_split in id
         id = Integer.parseInt(data_split[1]);
+
+
+        jswing_table jt = new jswing_table();
+        jt.table_view(id);
+
+        //prikaz_redovalnice();
         //close connection
         conn.connect_to_db().close();
         
     }
 
     
+    public void prikaz_redovalnice() throws SQLException
+    {
+        Integer [] ocene = new Integer[10];
+        
+        if(tip.equals(tip))
+        {
+        System.out.println(tip);
+        connection_ con = new connection_();
+        java.sql.Statement stm = con.connect_to_db().createStatement();
+        con.connect_to_db();
+        String query = "SELECT o.ocena FROM ocene o WHERE ucenec_id = "+id+";";
+        System.out.println(query);
+        ResultSet res = stm.executeQuery(query);
+        
+        int i = 1;
+        while(res.next())
+        {
+            //save data in ocene[]
+            ocene[i] = res.getInt(1);
+            i++;
+        }
+        }
+        //pritn out all ocene[]
+        for(int j = 1; j < ocene.length; j++)
+        {
+            System.out.println(ocene[j]);
+        }
+        
+        
+        
+            
+    }
 }

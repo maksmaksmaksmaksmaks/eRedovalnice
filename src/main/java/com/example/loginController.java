@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import com.example.funkcije.login;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -45,8 +44,8 @@ public class loginController {
         login =  new login();
         try {
             login.login_check(loginText.getText(), passText.getText());
+
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
