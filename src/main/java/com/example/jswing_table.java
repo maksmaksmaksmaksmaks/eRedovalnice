@@ -38,8 +38,8 @@ public class jswing_table {
         conn.connect_to_db().createStatement();
         ResultSet res = stm.executeQuery(query);
 
-        String columns[] = {"SLO", "RPA", "IMA", "OSTTJ"};
-        String data[][] = new String[collumn_count][5]; 
+        String columns[] = {"AJE", "SVZ", "RPA", "IMA", "SPO", "OSTTJ", "OMT"};
+        String data[][] = new String[collumn_count][7]; 
 
         int i = -1;
         int j = -1;
