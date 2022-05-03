@@ -14,6 +14,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    jswing_table jt = new jswing_table();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -34,6 +35,7 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+        
     }
 
 }
