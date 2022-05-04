@@ -1,11 +1,15 @@
-package com.example.funkcije;
+package com.example;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
+import com.example.App;
 import com.example.jswing_table;
 
 public class Start {
-    public void ucitelj(int id){
+    public void ucitelj(int id) throws IOException{
+        App.setRoot("ucitelj");
+
 
     }
 

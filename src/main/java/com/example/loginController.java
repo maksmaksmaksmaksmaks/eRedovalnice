@@ -1,10 +1,10 @@
 package com.example;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import com.example.funkcije.login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -39,7 +39,7 @@ public class loginController {
 
 
     @FXML
-    void LoginButtonPress(ActionEvent event) {
+    void LoginButtonPress(ActionEvent event) throws IOException {
         login login;
         login =  new login();
         try {

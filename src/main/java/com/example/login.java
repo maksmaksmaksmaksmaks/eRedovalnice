@@ -1,10 +1,11 @@
-package com.example.funkcije;
+package com.example;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.example.jswing_table;
+import com.example.funkcije.connection_;
 
+import java.io.IOException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -46,7 +47,7 @@ public class login {
     }
 
     //make public void login_check()
-    public void login_check(String loginText, String passText) throws SQLException {
+    public void login_check(String loginText, String passText) throws SQLException, IOException {
         String data = "";
         //get connection
         connection_ conn = new connection_();
